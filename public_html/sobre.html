@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/jpg" href="images/art.png">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/TopResponsivo.js"></script>
+        <script>
+            function explica1(){
+                document.getElementById('hdn1').style.visibility = 'visible';
+            }
+            function explica2(){
+                document.getElementById('hdn2').style.visibility = 'visible';
+            }
+            function explica3(){
+                document.getElementById('hdn3').style.visibility = 'visible';
+            }
+        </script>
+        <title>Sobre</title>
+    </head>
+    <body>
+		<div class="topnav" id="myTopnav">
+			<a href="index.php" class="active"><i><b>LIB-LAB</b></i></a>
+			<a href="login01.php" class="right">Login</a>
+			<a href="cad01.php" class="right">Cadastro</a>
+			<a href="sobre.html" class="right">Sobre</a>
+			<a href="javascript:void(0);" class="icon" onclick="topResp()">
+				<img src="images/menu.png" alt="menu" class="icomenu">
+			</a>
+		</div>
+        <div class="doc">
+            <div id="explicacoes">
+                <h1 class="titulo">O que é o projeto?</h1>
+                <p class="prg">A essência de nosso projeto tem a premissa de ajudar pessoas que estejam dispostas a aprender <i>Libras</i> e mostrar de forma cativante como é possível realizar o estudo de um novo idioma no cotidiano!<br>  Assim descartando várias barreiras que impedem a prática de buscar conhecimentos; alguns exemplos principais que ocorrem em nosso dia a dia são : o deslocamento, custo, dificuldade para encontrar um conteúdo de qualidade que seja acessível e tempo.</p>
+
+                <h2 class="titulo">Demonstração da plataforma:</h2>
+                <img src="images/gifDem.gif" class="gif" alt="Demonstração">
+                <img src="images/gifAlfa.gif" class="gif" alt="Alfabeto">
+
+    			<h2 class="titulo">O que define a plataforma? 3 MOTIVOS:</h2>
+    			<div class="colunasSobre">
+    				<div class="coluna01Sobre">
+                        <button id="bt1" class="explic" onclick="explica1()"> 1- SIMPLICIDADE</button>
+                        <button id="bt2" class="explic" onclick="explica2()"> 2- PORTABILIDADE</button>
+                        <button id="bt3" class="explic" onclick="explica3()">3- SEGURANÇA</button>
+                    </div>
+    			    <div class="coluna02Sobre">
+                        <p id="hdn1">Design RELAXANTE e HARMÔNICO, com cores pensadas para garantir conforto!!!<br> <img src="images/facil.png" class="icoExp"></p>
+                    </div>
+    				<div class="coluna02Sobre">
+                        <p id="hdn2">Site RESPONSIVO e PORTÁTIL a qualquer dispositivo que possua conexão com a internet. <br> 
+                        <img src="images/responsivo.png" class="icoExp"></p>
+                    </div>
+                    <div class="coluna02Sobre">
+                        <p id="hdn3">Os dados e informações que o usuário insere são CRIPTOGRAFADOS de ponta a ponta.<br> <img src="images/seguranca.png" class="icoExp">
+                        </p>
+                    </div>
+                    </div>
+    			</div>
+
+          <h2>Termos de uso e compromisso com os usuários</h2>
+              <a  class ="termos" href="pdf/termosDeUso.pdf" target="_blanket" dowload>TERMOS DE USO</a>
+
+          <h2>Manual do usuário (pdf)</h2>
+          <a  class ="termos" href="pdf/Manual de uso - Usuário - Lib-Lab.pdf" target="_blanket" dowload>Manual de uso - Usuário - Lib-Lab</a><br><br>
+
+          <footer>
+              <h2>Contato da professora Nera</h2>
+              Responsável pela admissão e correção do conteúdo na plataforma <br>  <br>
+              <a href="https://www.instagram.com/star.libras/" target="_blank"> <img src="images/instagram.png" alt="instagram" class="insta"> </a>Nera Santos - Star.Libras
+          </footer>
+      </div>
+  </body>
+</html>

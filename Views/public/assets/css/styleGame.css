@@ -1,0 +1,86 @@
+body{
+    text-align: center;
+}
+h1{
+    background-color: #2672c3;
+    color: #f3d200;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+.leftSide{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.labelExp{
+    font-size: 12px;
+    padding: inherit;
+}
+.labelExp > input{
+    display: none;
+    position: 0;
+}
+.labelExp input:checked + .radio-btns{
+    background-color: #10A6E7;
+    color: darkgray;
+}
+.radio-btns {
+    width: 20%;
+    background-color: gray;
+    height: auto;
+    border-radius: 15px;
+    position: initial;
+    text-align: center;
+    padding: 5px 5px;
+    cursor: pointer;
+    margin-left: 3%;
+    float: left;
+}
+.radio-btns > img{
+    width: auto;
+    max-height: 200px;
+    height: auto;
+}
+
+
+.formGame {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/*btn para prosseguir apos accerto*/
+#prox{
+    margin-top: 10px;
+    margin-left: 100px;
+    background-color: #3ae95d;
+    color: #009af3;
+    font-weight: bold;
+}
+#prox:hover{
+    background-color:#2b9673;
+    color: #f3f300;
+    font-weight: bold;
+}
+
+/*btn resposta*/
+#resp {
+    margin-top: 10%;
+}
+
+@media screen and (max-width: 800px){
+    .radio-btns {
+        width: 45%;
+        margin-top: 3%;
+        margin-left: 1%;
+    }
+}
+@media screen and (max-width: 600px){
+    .radio-btns { 
+        float: none; 
+        width: 95%;
+        margin-top: 3%;
+    }
+}
