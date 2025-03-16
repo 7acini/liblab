@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Permitir acesso a arquivos estáticos (CSS, JS, imagens, fontes)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule . - [L]
+
+# Redirecionar todas as outras requisições para index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA]
+
+# Exibir erros do PHP (remova em produção)
+php_flag display_errors 1
