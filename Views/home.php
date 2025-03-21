@@ -11,14 +11,14 @@
 	</head>
 	<body>
     <div class="topnav" id="myTopnav">
-        <a href="index.php" class="active"><i><b>LIB-LAB</b></i></a>
-        <a href="login01.php" class="right">LOGIN</a>
-        <a href="cad01.php" class="right">CADASTRO</a>
-        <a href="sobre.html" class="right">SOBRE</a>
+        <a href="./" class="active"><i><b>LIB-LAB</b></i></a>
+        <a href="/login" class="right">LOGIN</a>
+        <a href="/cadastro" class="right">CADASTRO</a>
+        <a href="/about" class="right">SOBRE</a>
         <a href="javascript:void(0);" class="icon" onclick="topResp()">
             <img src="images/menu.png" alt="menu" class="icomenu">
         </a>
-    </div> 
+    </div>
 	    <div class="doc">
     		<ul>
     			<h2 class="h2Index">APRENDA LIBRAS COM JOGOS!</h2>

@@ -1,10 +1,13 @@
 <?php 
-class RenderView{
 
-    public function loadView($view, $args)
-    {
-        extract($args);
+class RenderView {
 
-        require_once __DIR__."/../Views/$view.php";
+    public static function loadView($view, $args = []) {
+        if (!file_exists(__DIR__ . "/../Views/$view.php")) {
+            die("Erro: A view '$view' não foi encontrada.");
+        }
+
+        extract($args); // Transforma array associativo em variáveis individuais
+        require_once __DIR__ . "/../Views/$view.php";
     }
 }
