@@ -18,7 +18,7 @@
             </a>
         </div> 
 		<div>
-    		<form name="form1" id="form1" method="POST" action="login02.php" onsubmit="return validaLog()"> 
+    		<form name="form1" id="form1" method="POST" action="/" onsubmit="return validaLog()"> 
     			<h1>Login</h1>
     			<label for="email">Email:</label>
     			<input type="text" name="email" minlength="5" maxlength="100" size="40" placeholder="Email" id="email" autocomplete="on">

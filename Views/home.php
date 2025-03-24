@@ -12,9 +12,9 @@
 	<body>
     <div class="topnav" id="myTopnav">
         <a href="./" class="active"><i><b>LIB-LAB</b></i></a>
-        <a href="/login" class="right">LOGIN</a>
-        <a href="/cadastro" class="right">CADASTRO</a>
-        <a href="/about" class="right">SOBRE</a>
+        <a href="./login" class="right">LOGIN</a>
+        <a href="./cadastro" class="right">CADASTRO</a>
+        <a href="./about" class="right">SOBRE</a>
         <a href="javascript:void(0);" class="icon" onclick="topResp()">
             <img src="images/menu.png" alt="menu" class="icomenu">
         </a>
