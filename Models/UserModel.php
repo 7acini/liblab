@@ -17,13 +17,15 @@ class UserModel{
         $hashPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
         $stmt = $this->pdo->prepare($sql);
+        
         return $stmt->execute([
-            ":name"-> $username,
-            ":email"-> $email,
-            ":password"-> $hashPassword,
+            ":name" => $username,
+            ":email" => $email,
+            ":password" => $hashPassword,
         ]);
     }
-
+    
+    
     public function getUserByEmail($email){
         $sql = "SELECT * FROM users WHERE email = :email LIMIT 1";
         $stmt = $this->pdo->prepare($sql);
