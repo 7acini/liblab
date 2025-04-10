@@ -17,6 +17,46 @@ class UserController {
         RenderView::loadView('login');
     }
 
+    public function logout() {
+        session_start();
+        session_destroy();
+        header("Location: /login");
+        exit;
+    }
+    
+
+    public function auth() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $email = trim($_POST['email']);
+            $senha = trim($_POST['password']);
+    
+            $userModel = new UserModel();
+            $user = $userModel->getUserByEmail($email);
+    
+            if ($user && password_verify($senha, $user['password'])) {
+                session_start();
+                $_SESSION['user'] = $user;
+                header("Location: /menu");
+                exit;
+            } else {
+                echo "Email ou senha inválidos.";
+            }
+        }
+    }
+    
+    public function menu() {
+        session_start();
+        if (!isset($_SESSION['user'])) {
+            header("Location: /login");
+            exit;
+        }
+    
+        RenderView::loadView('user_menu.php', [
+            'user' => $_SESSION['user']['name'],
+        ]);
+    }
+    
+
     public function cadastro() {
         RenderView::loadView('/cadastro');
     }
