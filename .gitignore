@@ -1,0 +1,23 @@
+# Ignorar diretórios do Composer
+/vendor/
+composer.lock
+
+# Ignorar variáveis de ambiente e credenciais sensíveis
+.env
+.env.local
+.env.production
+.env.testing
+
+# Ignorar cache e arquivos temporários
+/cache/
+*.log
+*.cache
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos do editor/IDE
+.idea/
+.vscode/
+*.sublime-workspace

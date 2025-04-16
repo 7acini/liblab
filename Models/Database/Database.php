@@ -1,5 +1,7 @@
 <?php 
 
+require_once __DIR__."/../../Config/Config.php";
+
 use PDO;
 use PDOException;
 
@@ -15,10 +17,13 @@ class Database{
 
 
     public function __construct() {
-        $hostname="127.0.0.1";
-	    $username="root";
-	    $password="";
-        $database="";
+
+        Config::load();
+
+        $hostname = Config::get('DB_HOST', '127.0.0.1');
+        $username = Config::get('DB_USER', 'root');
+        $password = Config::get('DB_PASS', '');
+        $database = Config::get('DB_NAME', 'liblab');
 
         try {
             $this->pdo = new PDO("mysql:host=$hostname;dbname=$database;charset=utf8", $username, $password, $this->option);
